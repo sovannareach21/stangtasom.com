@@ -1,0 +1,1216 @@
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saint Francois General Knowledge And Private Technical High School</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .khmer {
+      font-family: 'Khmer OS Siemreap', sans-serif;
+    }
+
+    .top-header {
+      
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: white;
+      padding: 10px 20px;
+      border-bottom: 3px solid #003366;
+      
+    }
+
+    .logo {
+      height: 80px;
+      margin-right: 15px;
+    }
+
+    .school-names {
+      color: #003366;
+      flex-grow: 1;
+    }
+
+    .school-names h1,
+    .school-names p {
+      margin: 0;
+    }
+
+    .school-names h1.khmer {
+      font-size: 20px;
+    }
+
+    .school-names p {
+      font-size: 16px;
+      font-family: 'Times New Roman', serif;
+    }
+
+    nav {
+      background-color: #003366;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-family: 'Khmer OS Siemreap', sans-serif;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      background-color: #111;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .section {
+      display: none;
+      margin-bottom: 40px;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #003366;
+      color: white;
+      font-family: 'Khmer OS Siemreap', sans-serif;
+    }
+
+    img.school-photo {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .gallery img {
+      flex: 1 1 calc(33.333% - 20px);
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-header">
+    <img src="images/image1.png.jpg" alt="រូបភាពសាលា"​ style="margin-right: 10px;" width="80" height="auto">
+    <div class="school-names">
+      <h1 class="khmer">  វិទ្យាល័យចំណេះទូទៅ និងបច្ចេកទេសឯកជនសន្តហ្វ្រង់ស្វ័រ</h1>
+      <p>  Saint Francois General Knowledge And Private Technical High School</p>
+    </div>
+  </div>
+  
+  </div>
+  <!-- Navigation Menu -->
+  <nav>
+    <a onclick="showSection('home')">ទំព័រដើម</a>
+    <a onclick="showSection('about')">អំពីសាលា</a>
+    <a onclick="showSection('majors')">ជំនាញសិក្សា</a>
+    <a onclick="showSection('location')">ទីតាំង</a>
+    <a onclick="showSection('contact')">ទំនាក់ទំនង</a>
+    <a onclick="showSection('photos')">ទស្សនៈកិច្ចសិក្សា</a>
+    <a onclick="showSection('register')">ចុះឈ្មោះចូលរៀន</a>
+      
+    </div>
+  </form>
+</section>
+
+  </nav>
+<div class="language-switcher">
+      <a href="?lang=km" title="Khmer"><img src="images/image khmer flag.png" alt="Khmer" width="30"></a>
+      <a href="?lang=en" title="English"><img src="images/image English.png" alt="English" width="30"></a>
+    </div>
+  <div class="container">
+    <style>
+  .home-center {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .home-center .welcome-text {
+    font-family: 'Khmer OS Muol', 'Khmer OS', sans-serif;
+    font-size: 40px;
+    color: #2082e3;
+    margin-bottom: 30px;
+  }
+
+  .home-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .home-images img {
+    width: 48%;
+    max-width: 500px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .home-images img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Popup Style */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .popup img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .home-images img {
+      width: 100%;
+    }
+  }
+</style>
+
+<section id="home" class="section active">
+  <div class="home-center">
+    <p class="khmer welcome-text">សូមស្វាគមន៍មកកាន់ វិទ្យាល័យចំណេះទូទៅ និងបច្ចេកទេសឯកជនសន្តហ្វ្រង់ស្វ័រ!</p>
+    <div class="home-images">
+      <img src="images/image1.4.png" alt="រូបសាលា ១" onclick="openPopup(this.src)">
+      <img src="images/image2.png.png" alt="រូបសាលា ២" onclick="openPopup(this.src)">
+      <img src="images/image1.5.png" alt="រូបសាលា ៣" onclick="openPopup(this.src)">
+    </div>
+  </div>
+</section>
+
+<!-- Popup viewer -->
+<div id="popup" class="popup hidden" onclick="closePopup()">
+  <img id="popup-img" src="" alt="រូបធំ">
+</div>
+
+<script>
+  function openPopup(src) {
+    document.getElementById('popup-img').src = src;
+    document.getElementById('popup').classList.remove('hidden');
+  }
+
+  function closePopup() {
+    document.getElementById('popup').classList.add('hidden');
+  }
+</script>
+
+
+    <style>
+  .about-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .about-text {
+    flex: 2;
+    font-size: 20px;
+    line-height: 2;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    text-indent: 30px;   /* ចូលបន្ទាត់ដំបូង */
+    margin-top: 1px;     /* គម្លាតពីចំណងជើង */
+  }
+
+  .about-images {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .about-images img {
+    width: 48%;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+
+  .about-images img:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .about-wrapper {
+      flex-direction: column;
+    }
+
+    .about-images {
+      flex-direction: row;
+    }
+
+    .about-images img {
+      width: 100%;
+    }
+  }
+
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+
+  .popup img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+
+<section id="about" class="section">
+ <h2 style=" 
+  text-align: center;
+  font-family: 'Khmer OS Muol Light', 'Khmer OS', serif;
+  font-size: 28px;
+  color: #0a0909;
+  margin-bottom: 20px;
+">
+  ប្រវត្តិសាលា
+</h2>
+  <div class="about-wrapper">
+    <p class="khmer about-text">
+      ក្នុងឆ្នាំ ២០០៣ ព្រះសហគមន៍កាតូលិកចំការទៀង ដែលមានលោកអភិបាល អូលីវីយេ ក្នុងនាមជាអ្នកទទួលខុសត្រូវ ហើយលោកជាប្រធានគណៈកម្មការអប់រំសិក្សាធិការព្រះសហគមន៍កាតូលិកភូមិភាគភ្នំពេញ។ 
+      ដោយសង្កេតឃើញភាពក្រីក្រលំបាក សិស្សបោះបង់ការសិក្សាច្រើន ដោយសារពុំមានលទ្ធភាពបន្តការសិក្សានៅភ្នំពេញ លោកអភិបាលមានគំនិតបង្កើតវិទ្យាល័យបច្ចេកទេស។ 
+      ប៉ុន្តែពេលនោះ ពុំមានមធ្យោបាយអាចដំណើរការទៅបាន។ លោកអភិបាលក៏សម្រេចចិត្តបង្កើតវិទ្យាល័យចំណេះទូទៅ និងបណ្តុះបណ្តាលវិជ្ជាជីវៈ សន្តហ្វ្រង់ស្វ័រ ដោយបន្ថែមកម្មវិធីសិក្សាជំនាញមួយចំនួនដូចជា កសិកម្ម  លេខាធិការ និងតម្បាញសូត្រ។ 
+      ចាប់តាំងពីឆ្នាំ ២០០៣ រហូតដល់ឆ្នាំ ២០១៥ លោកអភិបាលបន្តចិញ្ចឹមចិត្តបង្កើតសាលាបច្ចេកទេស ក្នុងគោលបំណងឱ្យសិស្សក្រីក្រ និង សិស្សពុំមានសមត្ថភាពរៀនផ្នែកចំណេះទូទៅទទួលបានឱកាសសិក្សាផ្នែកអប់រំបច្ចេកទេសដើម្បីឱ្យពួកគេទទួលបាន
+      ជំនាញយ៉ាងពិតប្រាកដដើម្បីឱ្យពួកគេមានលទ្ធភាព សមត្ថភាពកសាងជីវភាពរស់នៅ និងកាត់បន្ថយភាពក្រីក្រនៅតាមជនបទ។ ក្នុងឆ្នាំ២០១៥ ក្រសួងអប់រំយុវជន និងកីឡា បានធ្វើកំណែទម្រង់ដោយផ្តោតសំខាន់លើការបណ្តុះបណ្តាលផ្នែកអប់រំបច្ចេកទេស។ 
+      ដោយមើលឃើញឱកាសដ៏ល្អនេះ លោកអភិបាលអូលីវីយ៉េបានចាប់ផ្តើមបង្កើតគណៈកម្មការមួយដើម្បីធ្វើការសម្របសម្រួលសុំបង្កើតវិទ្យាល័យចំណេះទូទៅ និងបច្ចេកទេស ឯកជន សន្តហ្រ្វង់ស្វ័រនេះឡើង ហើយបានសម្រេចជាស្ថាពរក្នុងឆ្នាំ ២០១៥ តាមសារាចរណ៍លេខ ២៥១៩ អយកប្រក ចុះថ្ងៃទី ០២ ខែកញ្ញា ឆ្នាំ ២០១៥ ។
+    </p>
+    <div class="about-images">
+      <img src="images/image1.2.png" alt="រូបទី១" onclick="openPopup(this.src)">
+      <img src="images/image1.3.png" alt="រូបទី២" onclick="openPopup(this.src)">
+      <img src="images/image1.5.png" alt="រូបទី៣" onclick="openPopup(this.src)">
+      <img src="images/image1.6.png" alt="រូបទី២" onclick="openPopup(this.src)">
+    </div>
+  </div>
+</section>
+
+<!-- Popup viewer -->
+<div id="popup" class="popup hidden" onclick="closePopup()">
+  <img id="popup-img" src="" alt="រូបធំ">
+</div>
+
+<script>
+  function openPopup(src) {
+    document.getElementById('popup-img').src = src;
+    document.getElementById('popup').classList.remove('hidden');
+  }
+
+  function closePopup() {
+    document.getElementById('popup').classList.add('hidden');
+  }
+</script>
+
+    <section id="majors" class="section">
+  <h2 style=" 
+  text-align: center;
+  font-family: 'Khmer OS Muol Light', 'Khmer OS', serif;
+  font-size: 28px;
+  color: #0a0909;
+  margin-bottom: 20px;
+">
+  ជំនាញសិក្សា
+</h2>
+
+  <!-- ក្សេត្រសាស្ត្រ -->
+  <div class="major">
+    <h3 class="khmer toggle-button" onclick="toggleSubMenu('agriculture')">ក្សេត្រសាស្ត្រ</h3>
+    <ul id="agriculture" class="sub-menu khmer hidden">
+      <li>
+        <strong>កម្មវិធីសិក្សា:</strong>
+        ....................................
+      </li>
+      <li>
+        <strong>មុខវិជ្ជាប្រឡងឆមាស:</strong>
+       .....................................
+      </li>
+      <li>
+        <strong>មុខវិជ្ជាប្រឡងបញ្ចប់:</strong>
+        សិស្សត្រូវប្រឡងជំនាញជាក់លាក់ និងសរសេរកិច្ចការស្រាវជ្រាវ។
+      </li>
+    </ul>
+  </div>
+
+  <!-- ការិយាល័យជួរមុខ -->
+  <div class="major">
+    <h3 class="khmer toggle-button" onclick="toggleSubMenu('office')">ការិយាល័យជួរមុខ</h3>
+    <ul id="office" class="sub-menu khmer hidden">
+      <li>
+        <strong>កម្មវិធីសិក្សា:</strong>
+        .............................................
+      </li>
+      <li>
+        <strong>មុខវិជ្ជាប្រឡងឆមាស:</strong>
+        ..................................................
+      </li>
+      <li>
+        <strong>មុខវិជ្ជាប្រឡងបញ្ចប់:</strong>
+       សិស្សត្រូវប្រឡងជំនាញជាក់លាក់ និងសរសេរកិច្ចការស្រាវជ្រាវ។
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .major {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #003366;
+    border-radius: 8px;
+  }
+
+  .major h3 {
+    color: #003366;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .sub-menu {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .sub-menu li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+
+<script>
+  function toggleSubMenu(id) {
+    const menu = document.getElementById(id);
+    if (menu) {
+      menu.classList.toggle('hidden');
+    }
+  }
+</script>
+
+
+
+    <section id="location" class="section">  
+      <h2 style=" 
+  text-align: right:;
+  font-family: 'Khmer OS Muol Light', 'Khmer OS', serif;
+  font-size: 28px;
+  color: #0a0909;
+  margin-bottom: 20px;
+">
+  ទីតាំង
+</h2>
+      <p class="khmer">
+        ផ្លូវជាតិលេខ៣ ភូមិអង្គរគគីរ ឃុំតាភេម ស្រុកត្រាំកក់ ខេត្តតាកែវ ខាងជើងផ្សារអង្គតាសោម ៣គីឡូម៉ែត្រ <br>
+        <a href="https://maps.app.goo.gl/PKupAvoN7qXPW2Xh6" target="_blank" class="khmer">បើកផែនទី</a>
+      </p>
+    </section>
+
+    <section id="contact" class="section">
+     <h2 style=" 
+  text-align: right: ;;
+  font-family: 'Khmer OS Muol Light', 'Khmer OS', serif;
+  font-size: 28px;
+  color: #0a0909;
+  margin-bottom: 20px;
+">
+ ទំនាក់ទំនង
+</h2>
+      <p class="khmer">អ៊ីមែល: saintfrancois.enquiry@gmail.com</p>
+      <p class="khmer">ទូរស័ព្ទ: 087 583 110</p>
+    </section>
+
+    <style>
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .image-item {
+    width: 250px;
+    text-align: center;
+  }
+
+  .image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .image-item img:hover {
+    transform: scale(1.05);
+  }
+
+  .caption {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .photo-group {
+    margin-bottom: 40px;
+  }
+
+  .group-title {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+
+<style>
+  .photo-group {
+    margin-bottom: 40px;
+  }
+
+  .group-title {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .group-content {
+    display: none;
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .group-text {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    background-color: #f3f3f3;
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .gallery {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .image-item {
+    width: 230px;
+  }
+
+  .image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .image-item img:hover {
+    transform: scale(1.05);
+  }
+
+  h2.khmer {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+</style>
+
+<style>
+  .photo-group {
+    margin-bottom: 40px;
+  }
+
+  .group-title {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .group-content {
+    display: none;
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  .group-text {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    background-color: #f3f3f3;
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .gallery {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .image-item {
+    width: 230px;
+  }
+
+  .image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .image-item img:hover {
+    transform: scale(1.05);
+  }
+
+  h2.khmer {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+<style>
+  .photo-group {
+    margin-bottom: 40px;
+  }
+
+  .group-title {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .group-content {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  .group-text {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    background-color: #f3f3f3;
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .gallery {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .image-item {
+    width: 230px;
+  }
+
+  .image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .image-item img:hover {
+    transform: scale(1.05);
+  }
+
+  h2.khmer {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+</style>
+
+<section id="photos" class="section">
+  <h2 style=" 
+  text-align: center;
+  font-family: 'Khmer OS Muol Light', 'Khmer OS', serif;
+  font-size: 28px;
+  color: #0a0909;
+  margin-bottom: 20px;
+">
+  ទស្សនៈកិច្ចសិក្សា
+</h2>
+
+
+
+  <!-- Group 1 -->
+  <div class="photo-group">
+    <h3 class="group-title khmer" onclick="toggleGroup('group1')">
+      ដំណើរទស្សនកិច្ចសិក្សា ជំនាញកសិកម្ម(ក្សេត្រសាស្ត្រ) ឆ្នាំទី៣
+    </h3>
+    <div class="group-content hidden" id="group1">
+      <div class="about-wrapper">
+    <p class="khmer about-text">
+        នៅថ្ងៃអង្គារ ៩រោច ខែពិសាខ ឆ្នាំម្សាញ់ សប្តស័ក ព.ស. ២៥៦៩ ត្រូវនឹងថ្ងៃទី២០ ខែឧសភា ឆ្នាំ២០២៥។
+<br> ការចុះទស្សនកិច្ចសិក្សារបស់សិស្សឆ្នាំទី៣ ជាមួយលោកគ្រូ-អ្នកគ្រូ ដើម្បីស្វែងយល់អំពីមុខវិជ្ជាផ្សេងៗ ក៏ដូចជា<br>ចំណេះដឹងថី្មៗជាច្រើនបន្ថែមទៀតនៃវិទ្យាស្ថានបច្ចេកវិទ្យាកំពង់ស្ពឺ សម្រាប់ជួយបំភ្លឺផ្លូវរបស់ប្អូនៗនៅពេលអនាគត។
+<br>២០.០៥.២០២៥
+<br> (រៀនពិត អនុវត្តន៍ពិត បទពិសោធន៍ពិតៗ)
+      </p>
+      <head>
+  <style>
+    .about-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 150px; /* ខិតជិតអក្សរ */
+  padding: 60px;
+  max-width: 1200px;
+  margin: auto;
+}
+    .about-images {
+      display: grid;size: 30px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .about-images img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 0; /* បែបចតុកោណ */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+    
+  </style>
+</head>
+
+      <div class="about-images">
+          <img src="images/A001.png" alt="រូបទី១" onclick="openPopup(this.src)">
+          <img src="images/A002.png" alt="រូបទី២" onclick="openPopup(this.src)">
+          <img src="images/A003.png" alt="រូបទី៣" onclick="openPopup(this.src)">
+          <img src="images/A003.png" alt="រូបទី៤" onclick="openPopup(this.src)">
+          <img src="images/A005.png" alt="រូបទី៤.១"​ onclick="openPopup(this.src)">
+          <img src="images/A006.png" alt="រូបទី៥.១"​ onclick="openPopup(this.src)">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Group 2 -->
+  <div class="photo-group">
+    <h3 class="group-title khmer" onclick="toggleGroup('group2')">
+      ដំណើរទស្សនកិច្ចសិក្សា ជំនាញការិយាល័យជួរមុខ ឆ្នាំទី២ ជំនាន់ទី៦
+    </h3>
+    <div class="group-content hidden" id="group2">
+    <div class="about-wrapper">
+    <p class="khmer about-text">
+        នាថ្ងៃសុក្រ ១១កើត ខែជេស្ឋ ឆ្នាំម្សាញ់ សប្តស័ក ព.ស.២៥៦៩ ត្រូវនឹងថ្ងៃទី០៦ ខែមិថុនា ឆ្នាំ២០២៥
+ដំណើរទស្សនកិច្ចសិក្សារយៈពេល១ថ្ងៃ របស់សិស្សានុសិស្សជំនាញការិយាល័យជួរមុខ ឆ្នាំទី២ ជំនាន់ទី៦ នៃវិទ្យាល័យចំណេះទូទៅនិងបច្ចេកទេស ឯកជន សន្តហ្រ្វង់ស័្វររួមមាន៖
+<br>1. ក្រុមហ៊ុន Thalias Hospitality ទស្សនៈកិច្ចសិក្សាទៅកាន់ភោជនីយដ្ឋាន Topaz ទាំងពីរទីតាំង 
+<br>2. Topaz (ផ្លូវនរោត្តម)ស្ថិតនៅលើផ្លូវលេខ ១៦២ ផ្លូវនរោត្តម (Preah Norodom Blvd), ភ្នំពេញ 
+<br>3. Topaz (The Commune – ទួលគោក) ស្ថិតនៅជាន់ទី១ ក្នុងអាគារ The Commune, ផ្លូវលេខ ៣៤៧, សង្កាត់ទួលគោក, ភ្នំពេញ
+<br>4. ក្រុមហ៊ុន Almond Hospitality ទស្សនៈកិច្ចសិក្សានៅក្នុង Yi Sang The Garden ស្ថិតលើផ្លូវលេខ 337, សង្កាត់បឹងកុក 1, ខ័ណ្ឌទួលគោក, ភ្នំពេញ
+ <br> ➡️ គោលបំណងនៃដំណើរទស្សនកិច្ចសិក្សាមានដូចជា៖ 
+<br>1. បង្កើនការយល់ដឹងបន្ថែមដល់សិស្សានុសិស្សលើដំណើរការប្រតិបត្តិការ ផ្នែការិយាល័យជួរមុខ ផ្នែកគេហកិច្ច និងផ្នែកសេវាកម្មអាហារ និងភេសជ្ជៈ ដើម្បីជារូបភាពក្នុងការពង្រឹងនូវពុទ្ធិបន្ថែមផ្សារភ្ជាប់ការសិក្សាទ្រឹស្តី និងការអនុវត្តផ្ទាល់។ 
+<br>2. បង្កើនទំនាក់ទំនងល្អរវាងស្ថាប័នទេសចរណ៍ និងក្រុមហ៊ុនបដិសណ្ឋារកិច្ច ជាមួយនឹងវិទ្យាល័យចំណេះទូទៅ និងបច្ចេកទេសឯកជន សន្តហ្វ្រង់ស្វ័រ និងជាការបង្កើតកិច្ចសហប្រតិបត្តិការល្អជាមួយគ្នាទៅវិញទៅមក និងឱកាសការងារសម្រាប់សិស្សានុសិស្សដែលសិក្សាលើជំនាញបច្ចេកទេស។
+    </p>
+      <div class="about-images">
+          <img src="images/image8.png" alt="រូបទី៤" onclick="openPopup(this.src)">
+          <img src="images/image9.png" alt="រូបទី៥" onclick="openPopup(this.src)">
+          <img src="images/image10.png" alt="រូបទី៦" onclick="openPopup(this.src)">
+          <img src="images/007.png" alt="រូបទី៧" onclick="openPopup(this.src)">
+      </div>
+    </div>
+  </div>
+    <!-- Group 3 -->
+  <div class="photo-group">
+    <h3 class="group-title khmer" onclick="toggleGroup('group3')">
+      ដំណើរទស្សនកិច្ចសិក្សា ជំនាញការិយាល័យជួរមុខ ឆ្នាំទី៣ ជំនាន់ទី៥
+    </h3>
+    <div class="group-content hidden" id="group3">
+    <div class="about-wrapper">
+    <p class="khmer about-text">
+      នាថ្ងៃចន្ទ ១២កើត ខែអាសាឍ ឆ្នាំម្សាញ់ សប្តស័ក ព.ស.២៥៦៩ ត្រូវនឹងថ្ងៃទី០៧ ខែកក្កដា ឆ្នាំ២០២៥
+ដំណើរទស្សនកិច្ចសិក្សារយៈពេល១ថ្ងៃ របស់សិស្សានុសិស្សជំនាញការិយាល័យជួរមុខ ឆ្នាំទី៣ ជំនាន់ទី៥ នៃវិទ្យាល័យចំណេះទូទៅនិងបច្ចេកទេស ឯកជន សន្តហ្រ្វង់ស័្វររួមមាន៖
+<br>1. សហគមន៍អេកូទេសចរណ៍ចំបក់ 
+<br>2. ឧទ្យានជាតិ ព្រះសុរាម្រិតកុសមៈ គិរីរម្យ
+<br>➡️ គោលបំណងនៃដំណើរទស្សនកិច្ចសិក្សាមានដូចជា៖ 
+<br>1. បង្កើនការយល់ដឹងបន្ថែមដល់សិស្សានុសិស្សស្វែងយល់ពីការគ្រប់គ្រងក្នុងសហគមន៍អេកូទេសចរណ៍ចំបក់ដើម្បីទទួលបានបទពិសោធន៍ថ្មីៗពាក់ព័ន្ធទៅនឹងការអភិរក្សលើធនធានធម្មជាតិ និងការចូលរួមរបស់ប្រជាជនដែលជាសមាជិកក្នុងសកម្មភាពអភិវឌ្ឍន៍សហគមន៍ទេសចរណ៍។ 
+<br>2. បង្កើនទំនាក់ទំនងល្អរវាងស្ថាប័នទេសចរណ៍ និងក្រុមហ៊ុនបដិសណ្ឋារកិច្ច ជាមួយនឹងវិទ្យាល័យចំណេះទូទៅ និងបច្ចេកទេសឯកជន សន្តហ្វ្រង់ស្វ័រ និងជាការបង្កើតកិច្ចសហប្រតិបត្តិការល្អជាមួយគ្នាទៅវិញទៅមក និងឱកាសការងារសម្រាប់សិស្សានុសិស្សដែលសិក្សាលើជំនាញបច្ចេកទេស។
+    </p>
+    <div class="about-images">
+      <img src="images/images001.png" alt="រូបទី១" onclick="openPopup(this.src)">
+      <img src="images/002.png" alt="រូបទី២" onclick="openPopup(this.src)">
+      <img src="images/003.png" alt="រូបទី៣" onclick="openPopup(this.src)">
+      <img src="images/004.png" alt="រូបទី២" onclick="openPopup(this.src)">
+    </div>
+        
+</section>
+
+<script>
+  function toggleGroup(id) {
+    const group = document.getElementById(id);
+    group.classList.toggle("hidden");
+  }
+
+  function openImage(src) {
+    window.open(src, '_blank');
+  }
+</script>
+
+
+<!-- Popup Viewer -->
+<div id="imagePopup" class="popup hidden" onclick="closeImage()">
+  <img id="popupImage" src="" alt="រូបធំ">
+</div>
+
+<style>
+  .photo-group {
+    margin-bottom: 30px;
+  }
+
+  .group-title {
+    background-color: #003366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .group-title:hover {
+    background-color: #002244;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .gallery img {
+    flex: 1 1 calc(25% - 15px);
+    max-width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .popup img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+
+<script>
+  function toggleGallery(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle('hidden');
+  }
+
+  function openImage(src) {
+    const popup = document.getElementById('imagePopup');
+    const popupImg = document.getElementById('popupImage');
+    popupImg.src = src;
+    popup.classList.remove('hidden');
+  }
+
+  function closeImage() {
+    document.getElementById('imagePopup').classList.add('hidden');
+  }
+</script>
+<section id="register" class="section">
+  <style>
+  body {
+    font-family: 'Khmer OS Siemreap', sans-serif;
+  }
+
+  h2 {
+    font-family: 'Khmer OS Muol Light', sans-serif;
+    font-size: 28px;
+    color: #000000;
+  }
+</style>
+
+  <p style="font-family: 'Khmer OS Siemreap'; font-size: 24px;">
+</p>
+    <h2 style=" 
+  text-align: center;
+  font-family: 'Khmer OS Muol Light', 'Khmer OS', serif;
+  font-size: 28px;
+  color: #000000;
+  margin-bottom: 20px;
+">
+  ទម្រង់ចុះឈ្មោះចូលរៀន
+</h2>
+
+    
+    <form action="your-server-endpoint.php" method="POST" enctype="multipart/form-data">
+      
+      <fieldset style="border: 5px solid red; border-radius: 40px; padding: 20px;">
+        <legend style="color:red;">ព័ត៌មានសិស្ស</legend>
+        <label>ឈ្មោះ​ ៖
+          <input type="text" name="name_en" style="margin-right: 15px ;" style="margin-left: 5px;"required>
+        </label>
+       
+        <label>Name (អង់គ្លេស)៖
+          <input type="text" name="name_en"style="margin-right: 15px ;" style="margin-left: 5px;" required>
+        </label>
+         <label>ទីកន្លែងកំណើត៖
+          <input type="text" name="address" style="margin-right: 15px ;" style="margin-left: 5px;">
+        </label>
+        <label>ភេទ៖
+          <select name="gender"style="margin-right: 15px ;" style="margin-left: 5px;" required>
+            <p style="font-family: 'Khmer OS Siemreap';"></p>
+            <option value="ប្រុស">ប្រុស</option>
+            <option value="ស្រី">ស្រី</option>
+          </select>
+        </label>
+        <label>ថ្ងៃ ខែ ឆ្នាំកំណើត៖
+          <input type="date" name="dob" style="margin-right: 15px ;" style="margin-left: 5px;"required>
+        </label>
+        <label>សញ្ជាតិ៖
+          <input type="text" name="nationality" style="margin-right: 15px ;" style="margin-left: 5px;"required>
+        </label>
+        <br> <label>ទីលំនៅបច្ចុបន្ន៖
+          <input type="text" name="full_address"style="margin-right: 15px ;" style="margin-left: 5px;" required>
+        </label>
+        <label>រៀននៅអនុវិទ្យាល័យ៖
+          <input type="text" name="level" style="margin-right: 15px ;" style="margin-left: 5px;"required>
+        </label>
+        <label>ឆ្នាំសិក្សា៖
+          <input type="text" name="academic_year" style="margin-right: 15px ;" style="margin-left: 5px;"required>
+        </label>
+      </fieldset>
+
+      <fieldset style="border: 5px solid red; border-radius: 40px; padding: 20px;">
+        <legend style="color:red;">Upload ឯកសារ</legend>
+        <label>សំបុត្រកំណើត៖
+          <input type="file" name="health_book" accept=".pdf,.jpg,.jpeg,.png" required>
+        </label>
+        <label>រូបថត (4x6cm)៖
+          <input type="file" name="photo" accept=".jpg,.jpeg,.png" required>
+          <label>ប្រត្តិបត្តិពិន្ទប្រឡងឌីប្លូម ៖
+          <input type="file" name="document" accept=".pdf,.jpeg,.png" required>
+        </label>
+      </fieldset>
+
+      <div style="text-align:center;margin-top: 10px;">
+        <button type="submit">បញ្ជូន</button>
+        <style>
+  button {
+    font-family: 'Khmer OS Siemreap', sans-serif;
+    background-color: #4CAF50; /* ពណ៌បៃតង */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+</style>
+
+      </div>
+    </form>
+  </section>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+  <html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saint Francois General Knowledge And Private Technical High School</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .khmer {
+      font-family: 'Khmer OS Siemreap', sans-serif;
+    }
+
+    .top-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: white;
+      padding: 10px 20px;
+      border-bottom: 3px solid #003366;
+    }
+
+    .logo {
+      height: 80px;
+      margin-right: 15px;
+    }
+
+    .school-names {
+      color: #003366;
+      flex-grow: 1;
+    }
+
+    .school-names h1,
+    .school-names p {
+      margin: 0;
+    }
+
+    .school-names h1.khmer {
+      font-size: 20px;
+    }
+
+    .school-names p {
+      font-size: 16px;
+      font-family: 'Times New Roman', serif;
+    }
+
+    .language-switcher {
+      display: flex;
+      gap: 10px;
+    }
+
+    .language-switcher a img {
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    nav {
+      background-color: #003366;
+      overflow: hidden;
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-family: 'Khmer OS Siemreap', sans-serif;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      background-color: #111;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .section {
+      display: none;
+      margin-bottom: 40px;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #003366;
+      color: white;
+      font-family: 'Khmer OS Siemreap', sans-serif;
+    }
+
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 15px;
+    }
+
+    .footer-social a img {
+      transition: transform 0.2s;
+    }
+
+    .footer-social a img:hover {
+      transform: scale(1.2);
+    }
+
+    .footer-location {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+    <footer>
+    <div class="footer-social">
+      <a href="https://web.facebook.com/profile.php?id=100057608164320" target="_blank"><img src="images/image-fb.png" alt="Facebook" width="30"></a>
+      <a href="https://www.tiktok.com/@saintfranciostechnical_0?_t=ZS-8xqmNffZufR&_r=1" target="_blank"><img src="images/tiktok.png.png" alt="TikTok" width="30"></a>
+      <a href="tel:087 583 110"><img src="images/image-call.png" alt="Call" width="30"></a>
+      <a href="https://maps.app.goo.gl/7w2SZHARazvQbiyu6" target="_blank"><img src="images/image-google map.png" alt="Map" width="30"></a>
+    </div>
+    <div class="footer-location khmer">
+      <img src="images/image-locat.png" width="30" style="vertical-align: middle;">
+      ផ្លូវជាតិលេខ៣ ភូមិអង្គរគគីរ ឃុំតាភេម ស្រុកត្រាំកក់ ខេត្តតាកែវ ខាងជើងផ្សារអង្គតាសោម ៣គីឡូម៉ែត្រ
+    </div>
+    <p class="khmer">© ២០២៥ Saint Francois General Knowledge And Private Technical High School រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+      });
+
+      const selected = document.getElementById(id);
+      if (selected) {
+        selected.classList.add('active');
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      showSection('home');
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const lang = urlParams.get('lang');
+      if (lang === 'en') {
+        document.documentElement.lang = 'en';
+        document.querySelectorAll('.khmer').forEach(el => el.style.display = 'none');
+        // Add more logic to toggle English content
+      } else {
+        document.documentElement.lang = 'km';
+      }
+    });
+  </script>
+
+</body>
+</html>
