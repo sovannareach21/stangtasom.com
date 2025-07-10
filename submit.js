@@ -5,7 +5,7 @@ import { formidable } from 'formidable';
 import fs from 'fs';
 import FormData from 'form-data';
 
-// ការកំណត់ពិសេសសម្រាប់ Vercel ដើម្បីអាចទទួលไฟล์បាន
+// Vercel-specific config to allow file uploads by disabling the default body parser
 export const config = {
   api: {
     bodyParser: false,
@@ -25,11 +25,11 @@ export default async function handler(request, response) {
   }
 
   try {
-    // ប្រើ formidable ដើម្បីបំបែកข้อมูล Text និង Files
+    // Use formidable to parse the multipart form data (texts and files)
     const form = formidable({});
     const [fields, files] = await form.parse(request);
 
-    // ---- ផ្នែកទី១: បញ្ជូនទិន្នន័យជាអក្សរ (Text Data) ----
+    // ---- Part 1: Send the text data ----
     let textMessage = `🔔 **New Student Registration**\n\n`;
     textMessage += `**Khmer Name:** ${fields.name_kh?.[0] || 'N/A'}\n`;
     textMessage += `**English Name:** ${fields.name_en?.[0] || 'N/A'}\n`;
@@ -41,7 +41,7 @@ export default async function handler(request, response) {
     textMessage += `**Middle School:** ${fields.middle_school?.[0] || 'N/A'}\n`;
     textMessage += `**Academic Year:** ${fields.academic_year?.[0] || 'N/A'}\n`;
 
-
+    // Send the formatted text message to Telegram
     await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -52,21 +52,19 @@ export default async function handler(request, response) {
       }),
     });
 
-    // ---- ផ្នែកទី២: បញ្ជូនไฟล์ម្តងមួយៗ (File Data) ----
-    // យើងនឹង перебирать ไฟล์ทั้งหมดที่ถูกอัปโหลด
+    // ---- Part 2: Loop through and send each file ----
     for (const fileField in files) {
       const fileArray = files[fileField];
       if (fileArray && fileArray.length > 0) {
         const file = fileArray[0];
-
-        // បង្កើត FormData ថ្មីសម្រាប់ส่งไฟล์ទៅ Telegram
+        
+        // Create a new FormData object for each file to send to Telegram
         const fileFormData = new FormData();
         fileFormData.append('chat_id', chatId);
-        // 'document' អាចรับไฟล์ប្រភេទ PDF, JPG, PNG បាន
         fileFormData.append('document', fs.createReadStream(file.filepath), file.originalFilename);
         fileFormData.append('caption', `📄 File uploaded: ${file.originalFilename}`);
 
-        // ส่งไฟล์ទៅកាន់ Telegram
+        // Send the file to the sendDocument endpoint
         await fetch(`https://api.telegram.org/bot${botToken}/sendDocument`, {
           method: 'POST',
           body: fileFormData,
@@ -74,12 +72,12 @@ export default async function handler(request, response) {
       }
     }
 
-    // បន្ទាប់ពីส่งเสร็จទាំងអស់ redirect អ្នកប្រើប្រាស់ទៅหน้า "Thank you" (ถ้ามี)
-    // ឬส่ง JSON response กลับไป
+    // Optionally, redirect the user to a "Thank you" page upon successful submission
+    // Or send a JSON response back to the client
     return response.status(200).json({ message: 'Form and files submitted successfully!' });
 
   } catch (error) {
     console.error('Server Error:', error);
-    return response.status(500).json({ message: 'An internal server error occurred while processing files.' });
+    return response.status(500).json({ message: 'An internal server error occurred while processing the form.' });
   }
 }
