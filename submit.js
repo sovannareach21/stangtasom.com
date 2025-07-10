@@ -1,4 +1,5 @@
 // File: /api/submit.js
+// --- FINAL VERSION ---
 
 import { formidable } from 'formidable';
 import fs from 'fs';
@@ -29,16 +30,18 @@ export default async function handler(request, response) {
     const [fields, files] = await form.parse(request);
 
     // ---- ផ្នែកទី១: បញ្ជូនទិន្នន័យជាអក្សរ (Text Data) ----
-    let textMessage = `🔔 **មានសិស្សថ្មីចុះឈ្មោះ**\n\n`;
-    textMessage += `**ឈ្មោះខ្មែរ:** ${fields.name_kh?.[0] || 'N/A'}\n`;
-    textMessage += `**ឈ្មោះឡាតាំង:** ${fields.name_en?.[0] || 'N/A'}\n`;
-    textMessage += `**ភេទ:** ${fields.gender?.[0] || 'N/A'}\n`;
-    textMessage += `**ថ្ងៃខែឆ្នាំកំណើត:** ${fields.dob?.[0] || 'N/A'}\n`;
-    textMessage += `**ទីកន្លែងកំណើត:** ${fields.full_address?.[0] || 'N/A'}\n`;
-    textMessage += `**សញ្ជាតិ:** ${fields.nationality?.[0] || 'N/A'}\n`;
-    textMessage += `**ទិលំនៅបច្ចុប្បន្ន:** ${fields.full_address?.[0] || 'N/A'}\n`;
-    textMessage += `**មកពីអនុវិទ្យាល៍យ:** ${fields.middle_school?.[0] || 'N/A'}\n`;
-    textMessage += `**ឆ្នាំសិក្សា:** ${fields.academic_year?.[0] || 'N/A'}\n`;
+    let textMessage = `🔔 **New Student Registration**\n\n`;
+    textMessage += `**Khmer Name:** ${fields.name_kh?.[0] || 'N/A'}\n`;
+    textMessage += `**English Name:** ${fields.name_en?.[0] || 'N/A'}\n`;
+    textMessage += `**Gender:** ${fields.gender?.[0] || 'N/A'}\n`;
+    textMessage += `**Date of Birth:** ${fields.dob?.[0] || 'N/A'}\n`;
+    textMessage += `**Place of Birth:** ${fields.birth_place?.[0] || 'N/A'}\n`;
+    textMessage += `**Nationality:** ${fields.nationality?.[0] || 'N/A'}\n`;
+    textMessage += `**Current Address:** ${fields.full_address?.[0] || 'N/A'}\n`;
+    textMessage += `**Middle School:** ${fields.middle_school?.[0] || 'N/A'}\n`;
+    textMessage += `**Academic Year:** ${fields.academic_year?.[0] || 'N/A'}\n`;
+
+
     await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -49,13 +52,13 @@ export default async function handler(request, response) {
       }),
     });
 
-    / ---- ផ្នែកទី២: sendDocument (File Data) ----
+    // ---- ផ្នែកទី២: បញ្ជូនไฟล์ម្តងមួយៗ (File Data) ----
     // យើងនឹង перебирать ไฟล์ทั้งหมดที่ถูกอัปโหลด
     for (const fileField in files) {
       const fileArray = files[fileField];
       if (fileArray && fileArray.length > 0) {
         const file = fileArray[0];
-        
+
         // បង្កើត FormData ថ្មីសម្រាប់ส่งไฟล์ទៅ Telegram
         const fileFormData = new FormData();
         fileFormData.append('chat_id', chatId);
