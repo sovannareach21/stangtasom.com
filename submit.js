@@ -49,7 +49,7 @@ export default async function handler(request, response) {
       }),
     });
 
-    / ---- ផ្នែកទី២: បញ្ជូនไฟล์ម្តងមួយៗ (File Data) ----
+    / ---- ផ្នែកទី២: sendDocument (File Data) ----
     // យើងនឹង перебирать ไฟล์ทั้งหมดที่ถูกอัปโหลด
     for (const fileField in files) {
       const fileArray = files[fileField];
