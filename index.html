@@ -597,7 +597,39 @@
     }
 
     /* For screens up to 480px (Mobile Portrait) */
-    @media screen and (max-width: 480px) {
+    @me@media (max-width: 768px) {
+        /* យើងលុបចោលការកំណត់ដែលធ្វើឱ្យ Menu បង្ហាញជាជួរឈរ (vertical)
+        និងការកំណត់ទំហំទទឹង 100% សម្រាប់ធាតុ Menu នីមួយៗ។
+        ដូច្នេះ វានឹងប្រើការកំណត់លំនាំដើម (default) របស់ Nav ដែលជា horizontal (display: flex)។ */
+
+        /* nav {
+            flex-direction: column;
+            align-items: stretch;
+        } */
+
+        /* nav a.nav-item, nav .dropbtn {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid #0056b3;
+        }
+        nav a.nav-item:last-child, nav .dropdown:last-child .dropbtn {
+            border-bottom: none;
+        } */
+
+        /* រក្សាទុកការកំណត់សម្រាប់ Dropdown នៅលើទូរស័ព្ទដៃ */
+        .dropdown-content {
+            position: static;
+            min-width: unset;
+            width: 100%;
+            box-shadow: none;
+        }
+        .dropdown:hover .dropdown-content {
+            display: none;
+        }
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+    }dia screen and (max-width: 480px) {
       .top-header {
         padding: 10px 5px;
       }
@@ -858,7 +890,7 @@
 
     <section id="register" class="section">
       <h2 class="khmer-text" data-text-id="registerHeading">ទម្រង់ចុះឈ្មោះចូលរៀន</h2>
-      <form action="your-server-endpoint.php" method="POST" enctype="multipart/form-data">
+      <form id="registrationForm" action="my.php" method="POST" enctype="multipart/form-data">
         <fieldset>
           <legend class="khmer-text" data-text-id="studentInfoLegend">ព័ត៌មានសិស្ស</legend>
           <label class="khmer-text" data-text-id="nameKhmerLabel">ឈ្មោះ (ខ្មែរ)៖
